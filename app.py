@@ -42,10 +42,63 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    .main { background-color: #0e0e1a; }
-    .block-container { padding-top: 1.5rem; }
-    h1, h2, h3 { color: #e0e0ff; }
-    .stMetric { background: #1a1a2e; border-radius: 8px; padding: 8px; }
+    .stApp {
+        background: radial-gradient(circle at top, #f8fbff 0%, #f0f5ff 35%, #e9eefb 100%);
+        color: #17223b;
+    }
+
+    .block-container {
+        padding-top: 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    h1, h2, h3 {
+        color: #14213d;
+        letter-spacing: 0.01em;
+    }
+
+    div[data-testid="stMetric"] {
+        background: linear-gradient(145deg, #17203f, #1f2b54);
+        border: 1px solid #2f3f79;
+        border-radius: 14px;
+        padding: 0.9rem 1rem;
+        box-shadow: 0 12px 24px rgba(20, 33, 61, 0.2);
+    }
+
+    div[data-testid="stMetricLabel"] {
+        color: #c8d5ff !important;
+        font-weight: 600;
+    }
+
+    div[data-testid="stMetricValue"] {
+        color: #ffffff !important;
+        font-size: 2.1rem;
+        font-weight: 700;
+        line-height: 1.15;
+    }
+
+    div[data-testid="stMetricDelta"] {
+        color: #93c5fd !important;
+    }
+
+    div[role="radiogroup"] {
+        background: #ffffff;
+        border: 1px solid #d7e1f5;
+        border-radius: 12px;
+        padding: 0.45rem;
+        box-shadow: 0 4px 16px rgba(20, 33, 61, 0.08);
+    }
+
+    div[role="radiogroup"] label {
+        border-radius: 8px;
+        padding: 0.4rem 0.7rem;
+        transition: all 0.2s ease;
+    }
+
+    div[role="radiogroup"] label:has(input:checked) {
+        background: #e9f2ff;
+        color: #0f3d8c;
+    }
     </style>
     """,
     unsafe_allow_html=True,
